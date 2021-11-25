@@ -1,3 +1,8 @@
 # Snowfall-Retrieval at High Latitude Using Deep Learning
 
 In this study, the focus is on retrieving snowfall rate over high latitude ocean utilizing the coincidences of passive and active data from the radiometer onboard the Global Precipitation Measurement Microwave Imager (GMI) and radar onboard the Cloud Profiling Radar satellites respectively. Constructing an a priori database consisting of these coincidences, two different deep learning frameworks are tested. The first framework consists of a classical 5 layer fully connected deep neural network that takes brightness temperature profiles from 13 different frequency channels of GMI as input. Whereas the second framework consists of the first framework and an additional 2-layer fully connected deep neural network capable of training on auxiliary variables of snow depth and sea ice concentration readily available from reanalysis datasets during the training phase. Both of the frameworks are capable of accurately retrieving snowfall rate at high latitudes ocean with average root-mean-squared-error (RMSE) of 0.083 mm/hr and 0.072 mm/hr for two frameworks respectively. We further tested the efficiency of the second framework that performed better among the two, by only training it on the data collected over southern hemisphere ocean. It is found that the second framework trained only on southern hemisphere data is capable of accurately learning the passive-active relationship and can retrieve snowfall with high accuracy and RMSE value of 0.073 mm/hr.
+
+![geospatialdensity](https://user-images.githubusercontent.com/46984734/143469051-6da9902f-4072-498d-9a6c-b67eec0edf45.png)
+
+
+![framework](https://user-images.githubusercontent.com/46984734/143469055-0b8aa343-859d-4344-a72d-1d9f8580acec.jpg)
